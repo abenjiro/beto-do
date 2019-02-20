@@ -262,3 +262,14 @@ legend + .form-group {
     color:white;
     }
 
+div.line {
+  width: 10px;
+}
+
+div.vertical-line {
+  border-left: 1px solid #808080;
+  height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1px;
+}
