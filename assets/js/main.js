@@ -18,11 +18,15 @@
       });
 
     }else{
-    	list.innerHTML += '<li>' + '<span class="checklist">' + todo.value + '</span>' +  '</li>';
+    	list.innerHTML += '<li>'  + todo.value +  '</li>';
     	store();
       $(function () { //ready
           toastr.info('Successfully added');
       });
+
+     
+   $('#addTodo').modal('hide');
+
     	todo.value = "";
     }
     
@@ -56,8 +60,8 @@
   function getValues() {
     var storedValues = window.localStorage.myitems;
     if(!storedValues) {
-      list.innerHTML = '<li><span class="checklist">Hello World</span></li>' +
-      '<li><span class="checklist">Welcome to my todo list</span></li>';
+      // list.innerHTML = '<li>Hello World</span></li>' +
+      // '<li>Welcome to my todo list</li>';
     }
     else {
       list.innerHTML = storedValues;
@@ -67,19 +71,27 @@
 })();
 
 //filter functions
+$(document).ready(function(){
+  $("#filter").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#list li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
 
-var input = document.getElementById('filter');
-input.onkeyup = function () {
-    var filter = input.value.toUpperCase();
-    var lis = document.getElementsByTagName('li');
-    for (var i = 0; i < lis.length; i++) {
-        var list = lis[i].getElementsByClassName('checklist')[0].innerHTML;
-        if (list.toUpperCase().indexOf(filter) == 0) 
-            lis[i].style.display = 'list-item';
-        else
-            lis[i].style.display = 'none';
-    }
-}
+// var input = document.getElementById('filter');
+// input.onkeyup = function () {
+//     var filter = input.value.toUpperCase();
+//     var lis = document.getElementsByTagName('li');
+//     for (var i = 0; i < lis.length; i++) {
+//         var list = lis[i].getElementsByTagName('li').innerHTML;
+//         if (list.toUpperCase().indexOf(filter) > -1) 
+//             lis[i].style.display = '';
+//         else
+//             lis[i].style.display = 'none';
+//     }
+// }
 
 
 //time function
@@ -91,8 +103,7 @@ function startTime() {
   var s = today.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
-  document.getElementById('txt').innerHTML =
-  h + ":" + m + ":" + s;
+  document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
   var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {
