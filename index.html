@@ -60,15 +60,15 @@
 
       <span><i class="fas fa-book mr-3"></i></i></span>
       <div class="lh-100 col-6" >
-        <h6 class="mb-0 text-white lh-100"><input type="text" class="form-control" name="" placeholder="Search Todo List ..." id="filter"></h6>
+        <h6 class="mb-0 text-white lh-100"><input type="text" class="form-control" name="" placeholder="Search Todo List ..." id="filter" autocomplete="off"></h6>
         <!--  <small>Since 2011</small> -->
       </div>
       <div class="col-4 offset-1">
-        <button type="button" class="btn btn btn-light btn-circle float-right" data-toggle="modal" data-target="#addTodo"> <i class="fas fa-plus"></i> </button>
+        <button type="button" class="btn btn btn-light btn-circle float-right" data-toggle="modal" data-target="#addTodo"> <i class="fas fa-plus slow-spin "></i> </button>
       </div>
     </div>
 
-    <div class="my-3 p-3 bg-white rounded shadow-sm">
+    <div class="my-3 p-3 bg-white rounded shadow-sm" id="unlcomplete-box">
       <p class="border-bottom border-gray pb-2 mb-0  text-center" id="TDs">TO DO LIST IS EMPTY, PLEASE CLICK ON THE PLUS SIGN TO ADD TO LIST.</p>
 
 
@@ -88,8 +88,8 @@
   </div>
 
 
-  <div class="my-3 p-3 bg-white rounded shadow-sm complete-box">
-      <h6 class="border-bottom border-gray pb-2 mb-0  text-center">COMPLETED TASK</h6>
+  <div class="my-3 p-3 bg-white rounded shadow-sm " id="complete-box">
+      <p class="border-bottom border-gray pb-2 mb-0  text-center">COMPLETED TASK</p>
       
       
       <div class=" text-muted pt-3">
@@ -149,9 +149,12 @@
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/popper.min.js" ></script>
 <script src="assets/js/all.min.js" ></script>
+<script src="assets/js/db.js" ></script>
+
 <script type="text/javascript" src="assets/js/main.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js">
 </script>
+  
 
 </body>
 </html>

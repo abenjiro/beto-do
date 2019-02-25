@@ -333,7 +333,7 @@ div.vertical-line {
 }*/
 .btn-circle:hover{
   color: coral;
-  /*transform: rotate(-90deg);*/
+  transform: rotate(-90deg);
 }
 
 .btn-change:hover{
@@ -349,7 +349,10 @@ div.vertical-line {
     /*color: red;*/
     display: none;
 }
-
+.slow-spin {
+  -webkit-animation: fa-spin 50s infinite linear;
+  animation: fa-spin 50s infinite linear;
+}
 
 
 
