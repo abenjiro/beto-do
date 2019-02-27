@@ -131,7 +131,7 @@ function addNewItem(list, itemText) {
 
   var edit = document.createElement("a");
   edit.href = "#";
-  edit.innerHTML = "<button class='btn btn-light btn-xs text-center float-right edit' > <i class='far fa-edit'></i> </button>";
+  edit.innerHTML = "<button class='btn btn-light btn-xs text-center float-right edit' > <i class='fas fa-pencil-alt'></i> </button>";
   edit.addEventListener('click', editItem, false);
 
 
