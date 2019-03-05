@@ -208,7 +208,7 @@ btnNew.onclick = function() {
                 });
                 $('#addTodo').modal('hide');
 
-              } else if (this.innerHTML == 'EDIT') {
+              } else if (this.innerHTML == 'SAVE') {
 
                 this.innerHTML = 'Save';
                 var inItemText = document.getElementById("inItemText");
@@ -306,7 +306,7 @@ btnNew.onclick = function() {
 function editItem() {
   $('#addTodo').modal('show');
 
-  btnNew.innerHTML = 'EDIT';
+  btnNew.innerHTML = 'SAVE';
   var li = this.parentNode;
   var item = li.getElementsByTagName("*");
   inItemText.value = item[1].innerHTML;
