@@ -43,6 +43,25 @@ This to-do application enhances productivity by empowering users to create, mark
 * **Javascript**
 * **toastr** 
 
+## Sample Project Images
+1. Add a new todo
+   
+![Image](https://github.com/user-attachments/assets/fff13fb9-2304-4f05-a879-08fe15fd3aff)
+
+2. Check them when done
+
+![Image](https://github.com/user-attachments/assets/a6d7451a-85c0-411b-8ff1-b5b6c5e616d7)
+
+3. Display of well separated list 
+
+![Image](https://github.com/user-attachments/assets/1e9fb6bd-b15d-4d37-a822-3ea057665cfd)
+
+
+4. Easy filter for todo list
+
+![Image](https://github.com/user-attachments/assets/b875f2e3-62ce-43e4-bd51-002027a54474)
+
+
 
 
 
